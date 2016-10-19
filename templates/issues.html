@@ -1,14 +1,14 @@
 <section class="container">
     <ul class="collection with-header">
         <li class="collection-header">
-            <p class="center"><i class="large material-icons">play_for_work</i></p>
+            <h5 class="center"> Issues: {{issueData.length}}</h5>
         </li>
 
         <div ng-repeat="issue in issueData | filter:searchIssue | orderBy:order:reverse">
 
             <li class="collection-item avatar col">
                 <img src="{{ userData.avatar_url }}" alt="" class="circle">
-                <span class="title"> <large>Issue:</large> {{ issue.title }} </span>
+                <span class="title"> {{ issue.title }} </span>
                 <p>
                     <a href="{{issue.html_url}}" target="_blank"><small>Issue #: {{issue.number}}</small></a>
                 </p>
