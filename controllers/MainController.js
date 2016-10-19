@@ -24,6 +24,7 @@
                 $scope.loadIssue = true;
             });
         };
-        $scope.order = "-updated_at";
+        $scope.update = "-updated_at";
+        $scope.created = "-created_at";
     }
 })();
