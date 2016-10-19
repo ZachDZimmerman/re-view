@@ -4,12 +4,7 @@
   padding-bottom: 2rem;
   margin-bottom: 1rem;
 }
-/*html.ng-scope #modalRow {
-  display: flex;
-  justify-content: center;
 
+.secondary-content {
+  position: fixed;
 }
-.lean-overlay{
- position: relative !important;
- display: none !important;
-}*/
