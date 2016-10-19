@@ -7,10 +7,10 @@
       $urlRouterProvider.otherwise("/");
 
       $stateProvider
-            .state("/", {
+            .state("main", {
                 url: "/",
                 controller: "MainController",
-                templateUrl: "/templates/home.html"
+                templateUrl: "/templates/main.html"
 
             });
   });

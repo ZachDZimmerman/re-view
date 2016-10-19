@@ -5,16 +5,16 @@
 
     function MainController($scope, $q, $http) {
 
-        $scope.issueUp = false;
-        $scope.userUp = false;
+        $scope.issueUpload = false;
+        $scope.userUpload = false;
 
         $http.get("https://api.github.com/users/angular")
           .success(function (data) {
-              $scope.user = data;
+              $scope.userData = data;
               getAngularIssues();
           })
           .error(function () {
-              $scope.userUp = true;
+              $scope.userUpload = true;
           });
 
         var getAngularIssues = function () {
@@ -23,21 +23,10 @@
                 $scope.issueData = data;
             })
             .error(function() {
-                $scope.issueLoaded = true;
+                $scope.issueUpload = true;
             });
         };
 
-console.log(getAngularIssues);
-
-// q={query}{&page,per_page,sort,order}
-
-        // // HTTP Requests
-        // $q.all(url).then(function(data) {
-        //     data = data[0].data.items.concat(data[1].data.items);
-        //     $scope.data = data;
-        //
-        //     console.log(data);
-        // });
+        $scope.order = '-updated_at';
     }
-    // $scope.update = "-updated_at";
 })();

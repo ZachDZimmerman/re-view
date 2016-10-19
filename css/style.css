@@ -1,5 +1,9 @@
 /*<----Landing Page------>*/
 
+.nav-wrapper {
+  padding-bottom: 2rem;
+  margin-bottom: 1rem;
+}
 /*html.ng-scope #modalRow {
   display: flex;
   justify-content: center;
