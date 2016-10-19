@@ -1,9 +1,9 @@
 (function() {
     angular.module("notes").controller("MainController", MainController);
 
-    MainController.$inject = ["$scope", "$q", "$http"];
+    MainController.$inject = ["$scope",  "$http"];
 
-    function MainController($scope, $q, $http) {
+    function MainController($scope, $http) {
 
         $scope.loadIssue = false;
         $scope.loadUser = false;
@@ -17,7 +17,7 @@
         });
 
         var getAngularIssues = function() {
-            $http.get("https://api.github.com/search/issues?q=repo:angular/angular&per_page=100")
+            $http.get("https://api.github.com/repos/angular/angular.js/issues")
             .success(function(data) {
                 $scope.issueData = data;
             }).error(function() {
