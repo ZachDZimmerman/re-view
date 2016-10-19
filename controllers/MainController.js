@@ -17,7 +17,7 @@
         });
 
         var getAngularIssues = function() {
-            $http.get("https://api.github.com/repos/angular/angular.js/issues")
+            $http.get("https://api.github.com/search/issues?q=repo:angular/angular&per_page=100")
             .success(function(data) {
                 $scope.issueData = data;
             }).error(function() {
