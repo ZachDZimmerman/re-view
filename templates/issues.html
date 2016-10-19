@@ -1,13 +1,16 @@
 <section class="container">
+<header>
+  <img src="{{ userData.avatar_url }}" alt="" class="circle">
+</header>
 
     <ul class="collection with-header">
       <li class="collection-header">
-        <h4 class="new badge center" data-badge-caption="Issues"> ISSUES: {{ issue.length }} </h4>
+        <h4 class="new badge center" data-badge-caption="Issues"> ISSUES: {{ issueData.length }} </h4>
       </li>
       <div ng-repeat="issue in issueData | filter:searchIssue | orderBy:order:reverse">
 
-        <li class="collection-item avatar col">
-            <img src="{{ userData.avatar_url }}" alt="" class="circle">
+        <li class="collection-item col">
+
             <span class="title"><a href="{{issue.html_url}}" target="_blank" ><small>Issue #: {{issue.number}}</small></a> {{ issue.title }}</span>
             <p>
               <a href="{{issue.user.html_url}}"><i class="small material-icons">perm_identity</i>
