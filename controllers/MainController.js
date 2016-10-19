@@ -1,5 +1,5 @@
 (function() {
-    angular.module("notes").controller("MainController", MainController);
+    angular.module("angular").controller("MainController", MainController);
 
     MainController.$inject = ["$scope",  "$http"];
 

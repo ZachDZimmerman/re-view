@@ -1,5 +1,5 @@
 (function(){
-      angular.module("notes", [
+      angular.module("angular", [
           "ui.materialize",
           "ui.router"
       ])
@@ -7,12 +7,12 @@
       $urlRouterProvider.otherwise("/");
 
       $stateProvider
+            // .state("/", {
+            //     url: "/",
+            //     controller: "MainController",
+            //     templateUrl: "/templates/main.html"
+            // })
             .state("/", {
-                url: "/",
-                controller: "MainController",
-                templateUrl: "/templates/main.html"
-            })
-            .state("issues", {
                 url: "/",
                 controller: "MainController",
                 templateUrl: "/templates/issues.html"
