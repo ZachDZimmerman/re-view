@@ -1,14 +1,22 @@
 <section class="col">
  <header>
-   <h5><span class="new badge" data-badge-caption="Issues"> {{ issue.length }} </span></h5> 
+   <h5><span class="new badge" data-badge-caption="Issues"> {{ issue.length }} </span></h5>
  </header>
   <article class="row" ng-repeat="issue in issueData | filter:searchIssue | orderBy:order:reverse">
 
     <ul class="collection">
         <li class="collection-item avatar">
-            <img src="{{ userData.avatar_url }}" alt="" class="circle">
+            <img src="{{ userData.avatar_url }}" alt="" class="circle"><small>{{issue.number}}</small>
             <span class="title">{{ issue.title }}</span>
-            <span>{{}}</span>
+            <span>{{issue.user.html_url}}</span>
+            <span>{{issue.user.login}}</span>
+
+            <div class="row">
+              <dt>Last Updated:</dt>
+              <dd>{{issue.updated_at | date : short : timezone }}</dd>
+              <dt>Created:</dt>
+              <dd>{{issue.created_at | date: short: timezone }}</dd>
+            </div>
         </li>
     </ul>
   </article>
