@@ -1,6 +1,6 @@
 <section class="col">
  <header>
-   <h5><span class="new badge" data-badge-caption="Issues">{{ issueData.length }}</span></h5> 
+   <h5><span class="new badge" data-badge-caption="Issues"> {{ issue.length }} </span></h5> 
  </header>
   <article class="row" ng-repeat="issue in issueData | filter:searchIssue | orderBy:order:reverse">
 
