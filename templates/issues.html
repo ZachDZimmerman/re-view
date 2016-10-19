@@ -1,0 +1,13 @@
+<section class="col">
+
+<article class="row" ng-repeat="issue in issueData | filter:searchIssue | orderBy:order:reverse">
+
+    <ul class="collection">
+        <li class="collection-item avatar">
+            <img src="{{ userData.avatar_url }}" alt="" class="circle">
+            <span class="title">{{ issue.title }}</span>
+        </li>
+</ul>
+  </article>
+
+</section>

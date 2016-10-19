@@ -3,15 +3,21 @@
           "ui.materialize",
           "ui.router"
       ])
-  .config(function($stateProvider, $urlRouterProvider){
+  .config(function($stateProvider, $urlRouterProvider, $locationProvider){
       $urlRouterProvider.otherwise("/");
 
       $stateProvider
-            .state("main", {
+            .state("/", {
                 url: "/",
                 controller: "MainController",
                 templateUrl: "/templates/main.html"
+            })
+            .state("issues", {
+                url: "/",
+                controller: "MainController",
+                templateUrl: "/templates/issues.html"
 
             });
+      $locationProvider.html5Mode(true);
   });
 })();
