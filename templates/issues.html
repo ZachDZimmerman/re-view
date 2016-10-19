@@ -5,25 +5,23 @@
         </li>
 
         <article ng-repeat="issue in issueData | filter:searchIssue | orderBy:order:reverse">
-            <div class="container">
-              <li class="collection-item avatar">
+            <li class="collection-item avatar">
                 <img src="{{ userData.avatar_url }}" alt="" class="circle">
-                <h4"> {{ issue.title }} </h4>
+                <h4 "> {{ issue.title }} </h4>
                 <p>
-                    <a href="{{issue.html_url}}" target="_blank">{{issue.number}}</a>
+                    <a href="{{issue.html_url}} " target="_blank ">{{issue.number}}</a>
                 </p>
                 <p>
-                    <a href="{{issue.user.html_url}}"><i class="small material-icons">perm_identity</i>
+                    <a href="{{issue.user.html_url}} "><i class="small material-icons ">perm_identity</i>
                     <span><large>{{issue.user.login}}</large></span></a>
                 </p>
 
-                <div class="secondary-content row s3 offset-s3 m6 offset-m6">
+                <div class="secondary-content row s3 offset-s3 m6 offset-m6 ">
                     <p>Last Updated: {{ issue.updated_at | date : short : timezone }}</p>
                     <p>Created: {{ issue.created_at | date : short : timezone }}</p>
                 </div>
-                <div class="divider"></div>
+                <div class="divider "></div>
             </li>
-          </div>
         </article>
     </ul>
 
