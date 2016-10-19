@@ -12,14 +12,12 @@
         <li class="collection-item avatar">
             <img src="{{ userData.avatar_url }}" alt="" class="circle"><a><small>{{issue.number}}</small></a>
             <h4 class="title">{{ issue.title }}</h4>
-            <a href="{{issue.user.html_url}}"><i class="small material-icons">perm_identity</i></a>
-            <small>{{issue.user.login}}</small>
+            <a href="{{issue.user.html_url}}"><i class="small material-icons">perm_identity</i>
+            <span>{{issue.user.login}}</span></a>
 
             <div class="secondary-content">
-              <dt>Last Updated:</dt>
-              <dd>{{ issue.updated_at | date : short : timezone }}</dd>
-              <dt>Created:</dt>
-              <dd>{{ issue.created_at | date: short: timezone }}</dd>
+              <dt>Last Updated:</dt><dd>{{ issue.updated_at | date : short : timezone }}</dd>
+              <dt>Created:</dt><dd>{{ issue.created_at | date: short: timezone }}</dd>
             </div>
         </li>
     </ul>
