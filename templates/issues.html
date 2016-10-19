@@ -1,8 +1,7 @@
-<section class="col">
+<section class="container">
  <!-- <header>
    <h5><</h5>
  </header> -->
-  <div class="row" ng-repeat="issue in issueData | filter:searchIssue | orderBy:order:reverse">
 
     <ul class="collection with-header">
       <li class="collection-header">
@@ -10,6 +9,7 @@
           <span class="new badge" data-badge-caption="Issues"> {{ issue.length }} </span>
         </h4>
       </li>
+      <div class="col s8" ng-repeat="issue in issueData | filter:searchIssue | orderBy:order:reverse">
 
         <li class="collection-item avatar">
             <img src="{{ userData.avatar_url }}" alt="" class="circle"><small>{{issue.number}}</small>
