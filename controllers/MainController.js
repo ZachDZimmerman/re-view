@@ -24,7 +24,7 @@
                 $scope.loadIssue = true;
             });
         };
-        $scope.update = "-updated_at";
-        $scope.created = "-created_at";
+        $scope.update = "updated_at";
+        $scope.created = "created_at";
     }
 })();

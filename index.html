@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Github Angular Issues Search</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/4.1.1/normalize.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
     <link rel="stylesheet" href="/css/style.css" media="screen" charset="utf-8">
@@ -12,7 +13,7 @@
   <body>
 
     <navbar class='header-footer'>
-        <nav class='blue lighten-1'>
+        <nav class='blue'>
           <div class="nav-wrapper container">
             <a href="https://www.reachengine.com/" class="brand-logo">Levels Beyond</a>
             <ul class="right hide-on-med-and-down">
@@ -27,19 +28,28 @@
       <div class='row github-search'>
         <div class="col l6 offset-l3 m6 offset-m3 s12 center ">
           <h3 class='center'>Github Angular Issues Search</h3>
-          <br><br>
           <form class='col l6 offset-l3 m6 offset-m3 s12 center' ng-submit="issues">
             <div class="input-field">
               <input id="search" type="search" ng-model='searchIssue' required>
-              <label for="search"><i class="material-icons">search</i></label>
+              <label for="search"><i class="material-icons prefix">search</i></label>
             </div>
-            <button class="btn waves-effect amber darken-1" type="submit" name="action" ui-sref="issues">Submit
+            <button class="btn waves-effect amber darken-1">Search</button>
           </form>
         </div>
       </div>
 
 
     <div ui-view></div>
+
+<br>
+
+    <footer class="page-footer blue header-footer">
+         <div class="footer-copyright blue">
+           <div class="container">
+             © 2016 Zach Zimmerman
+           </div>
+         </div>
+       </footer>
 
     <!-- jQuery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
