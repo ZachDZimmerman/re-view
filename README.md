@@ -6,7 +6,7 @@ Using the Github REST API you can search the Angular Github repo for the last 7 
 
 Results are displayed with issue title, user login and assignee login.
 
-This SPA was built on Angular using HTML5, ui-router and ui-materialize.
+This SPA was built on Angular using ui-router and ui-materialize.
 
 ## Development
 1. Fork and git clone repo onto your local machine.
